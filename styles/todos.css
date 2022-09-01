@@ -1,0 +1,89 @@
+.todo hr{
+    margin: 42px auto;
+    max-width: 200px;
+    width: 100%;
+}
+.todo__list{
+    display: flex;
+    flex-direction: column;
+}
+.todo__item {
+    padding: 32px 47px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0px 4px 30px rgba(60, 27, 66, 0.07);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.todo__item-header {
+    flex-basis: 80%;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+}
+.todo__item-timestamp {
+    margin-top: 35px;
+    flex-grow: 1;
+    text-align: right;
+    color: #838383;
+}
+
+.todo__item-title {
+    font-size: 50px;
+    font-weight: 500;
+    color: #946695;
+}
+.todo__item-btns{
+    display: flex;
+}
+.todo__item-rename, .todo__item-delete{
+    border: none;
+    outline: none;
+    background: none;
+    width: 50px;
+    height: 50px;
+}
+.todo__item-emoji {
+    
+}
+.todo__item_complete{
+    background: #C4E4C3;
+    border: 2px solid #47C044;
+}
+.todo__item_complete .todo__item-title{
+    text-decoration: line-through;
+}
+
+.todo__rename-message{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 50px 0;
+    text-align: center;
+    font-size: 30px;
+    background: white;
+}
+
+@media (max-width:700px) {
+    .todo__item {
+        align-items: flex-end;
+    }   
+    .todo__item-header {
+        flex-basis: 100%;
+        flex-grow: 1;
+        order: 1;
+    }
+    .todo__item-timestamp {
+        flex-basis: 50%;
+        order: 2;
+        text-align: left;
+        margin-right: 10px;
+    }
+    .todo__item-btns{
+        order: 3;
+    }
+}

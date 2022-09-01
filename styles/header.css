@@ -1,0 +1,80 @@
+.todo {
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.todo__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.todo__title {
+    color: #946695;
+    font-size: 50px;
+    margin-bottom: 44px;
+}
+.todo__input-container {
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+}
+.todo__input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 21px 26px;
+}
+.todo__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 34px;
+    background: #946695;
+    border-radius: 10px;
+    border:none;
+    margin-left: 7px;
+    color: white;
+}
+.todo__emoji-list {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.emoji__item {
+    position: relative;
+}
+.emoji__toggler {
+   position: absolute;
+   z-index: 100;
+   opacity: 0;
+}
+.emoji__label {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background: white;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.15) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    transition: transform 0.5s;
+}
+.emoji__toggler:checked ~  .emoji__label {
+    transform: scale(1.1);
+    border: 1px solid #946695
+}
+@media (max-width:700px) {
+    .todo__emoji-list div{
+        width: 40px;
+        height: 40px;
+    }
+    .emoji__label{
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+    }
+}
